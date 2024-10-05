@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Ladder
+  - Coin
   layers:
   - Default
   - TransparentFX
