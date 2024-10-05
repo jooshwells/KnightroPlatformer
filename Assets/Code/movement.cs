@@ -7,7 +7,8 @@ public class movement : MonoBehaviour
     public Vector3 transformScale;
 
 
-    [SerializeField] private float speed;
+    [SerializeField] private float move_speed;
+    [SerializeField] private float jump_speed;
     private Rigidbody2D body;
     private bool grounded;
    
@@ -17,7 +18,7 @@ public class movement : MonoBehaviour
 
     private void Update() {
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector3(horizontalInput*speed , body.velocity.y);
+        body.velocity = new Vector3(horizontalInput*move_speed , body.velocity.y);
         if (horizontalInput > 0.01f)
         {
             Vector3 newScale = transformScale;
@@ -36,7 +37,7 @@ public class movement : MonoBehaviour
         }
     }
     private void Jump() {
-        body.velocity = new Vector2(body.velocity.x, speed/2);
+        body.velocity = new Vector2(body.velocity.x, jump_speed/2);
         grounded = false;
     }
     private void OnCollisionEnter2D(Collision2D collision) {
