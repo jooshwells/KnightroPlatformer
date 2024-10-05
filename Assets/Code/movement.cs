@@ -11,6 +11,7 @@ public class movement : MonoBehaviour
     [SerializeField] private float jump_speed;
     private Rigidbody2D body;
     private bool grounded;
+    private bool onladder;
    
    private void Awake() {
     body = GetComponent<Rigidbody2D>();
@@ -32,7 +33,7 @@ public class movement : MonoBehaviour
             transform.localScale = newScale;
         }
 
-        if(Input.GetKey(KeyCode.Space) && grounded) {
+        if(Input.GetKey(KeyCode.Space) && (grounded || onladder)) {
             Jump();
         }
     }
@@ -42,6 +43,15 @@ public class movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Ground")
+        {
             grounded = true;
+            onladder = false;
+        }
+            
+        if(collision.gameObject.tag == "Ladder")
+        {
+            grounded = false;
+            onladder = true;
+        }
     }
 }
