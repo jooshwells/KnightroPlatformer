@@ -17,12 +17,17 @@ public class movement : MonoBehaviour
     private void Update() {
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector3(horizontalInput*speed , body.velocity.y);
-
-        if(horizontalInput >0.01f) {
-            transform.localScale = transformScale;
+        if (horizontalInput > 0.01f)
+        {
+            Vector3 newScale = transformScale;
+            newScale.x = Mathf.Abs(transformScale.x);
+            transform.localScale = newScale;
         }
-        else if(horizontalInput <0.01f) {
-            transform.localScale = transformScale;
+        else if (horizontalInput < -0.01f)
+        {
+            Vector3 newScale = transformScale;
+            newScale.x = -Mathf.Abs(transformScale.x); 
+            transform.localScale = newScale;
         }
 
         if(Input.GetKey(KeyCode.Space)) {
