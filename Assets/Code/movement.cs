@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+    public Vector3 transformScale;
+
+
     [SerializeField] private float speed;
     private Rigidbody2D body;
    
@@ -16,10 +19,10 @@ public class movement : MonoBehaviour
         body.velocity = new Vector3(horizontalInput*speed , body.velocity.y);
 
         if(horizontalInput >0.01f) {
-            transform.localScale = Vector3.one;
+            transform.localScale = transformScale;
         }
         else if(horizontalInput <0.01f) {
-            transform.localScale = new Vector3(-1,1,1);
+            transform.localScale = transformScale;
         }
 
         if(Input.GetKey(KeyCode.Space)) {
