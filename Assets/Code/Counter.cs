@@ -15,6 +15,6 @@ public class Counter : MonoBehaviour
 
     void Update()
     {
-        coinText.text = "Coint Count: " + coinCount.ToString();
+        coinText.text = "Coin Count: " + coinCount.ToString();
     }
 }
