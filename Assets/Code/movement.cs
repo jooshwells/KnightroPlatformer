@@ -11,9 +11,11 @@ public class movement : MonoBehaviour
     private Rigidbody2D body;
     private bool grounded;
     private bool onladder;
+    private Animator anim;
    
    private void Awake() {
     body = GetComponent<Rigidbody2D>();
+    anim = GetComponent<Animator>();
    }
 
     private void Update() {
@@ -36,9 +38,14 @@ public class movement : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && (grounded || onladder)) {
             Jump();
         }
+
+        anim.SetBool("walk", horizontalInput !=0);
+        anim.SetBool("grounded", grounded);
+
     }
     private void Jump() {
         body.velocity = new Vector2(body.velocity.x, jump_speed/2);
+        anim.SetTrigger("jump");
         grounded = false;
     }
     private void OnCollisionEnter2D(Collision2D collision) {
