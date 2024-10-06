@@ -522,9 +522,37 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.1392883
       objectReference: {fileID: 0}
+    - target: {fileID: 232261663945531158, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 232261663945531158, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_Size.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 232261663945531158, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 927ce82e34c689343a891d2dfc1c8bcf, type: 3}
+    - target: {fileID: 232261663945531158, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5366705830675468640, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560637021976513375, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560637021976513375, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560637021976513375, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 6560637021976513375, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -570,6 +598,18 @@ PrefabInstance:
       propertyPath: count
       value: 
       objectReference: {fileID: 1397598362}
+    - target: {fileID: 6802217857269257975, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: transformScale.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802217857269257975, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: transformScale.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802217857269257975, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
+      propertyPath: transformScale.z
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 7249323612626604527, guid: f7a24175656cc564cbd1599b95d523f3, type: 3}
       propertyPath: m_Radius
       value: 0.13594031
