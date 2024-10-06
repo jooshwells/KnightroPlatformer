@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class movement : MonoBehaviour
 {
@@ -57,5 +59,14 @@ public class movement : MonoBehaviour
             Destroy(other.gameObject);
             count.coinCount++;
         }
+         if (other.gameObject.CompareTag("Portal") && count.coinCount >= 3) {
+            Destroy(other.gameObject);
+            ChangeScene();
+        }
+    }
+
+    private void ChangeScene(){
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
